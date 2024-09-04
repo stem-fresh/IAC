@@ -15,6 +15,7 @@ node_pool_machine_type     = "e2-standard-2"
 node_pool_disk_size        = 10
 service_account_email      = "kxn-dev-service-acc@kxn-dev-432901.iam.gserviceaccount.com"
 gke_cluster_name           = "kxn-dev-private-cluster"
+gke_location               = "us-central1-f"
 node_pool_name             = "kxn-dev-primary-node-pool"
 router_name                = "kxn-dev-nat-router"
 nat_name                   = "kxn-dev-nat-gateway"

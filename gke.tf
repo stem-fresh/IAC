@@ -1,6 +1,6 @@
 resource "google_container_cluster" "primary" {
   name     = var.gke_cluster_name
-  location = "us-central1-f"
+  location = var.gke_location
   network  = google_compute_network.vpc_network.name
   subnetwork = google_compute_subnetwork.private_subnet.name
   deletion_protection = false

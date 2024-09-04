@@ -47,4 +47,5 @@ variable "allow_ssh_firewall_name" {}
 variable "internal_source_ranges" {}
   
 variable "ssh_source_ranges" {}
-  
+
+variable "gke_location" {}
