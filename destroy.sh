@@ -4,7 +4,6 @@
 # -x Echo output to the stdout
 set -e -x
 
-
 # Init the terraform
 terraform init
 terraform plan
