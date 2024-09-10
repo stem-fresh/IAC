@@ -15,7 +15,7 @@ service_ip_range           = "10.3.0.0/20"                   # Service IP range 
 gke_cluster_name           = "xyz-dev-private-cluster"       # Name of the GKE cluster
 gke_location               = "us-central1-f"                 # Location (zone/region) of the GKE cluster
 node_pool_name             = "xyz-dev-primary-node-pool"     # Name of the node pool
-node_pool_machine_type     = "e2-standard"                 # Machine type for the GKE node pool
+node_pool_machine_type     = "e2-standard-2"                 # Machine type for the GKE node pool
 node_disk_size             = 30                              # Disk size for nodes in the GKE node pool (in GB)
 node_count                 = 2                               # Number of nodes in the node pool
 
@@ -23,7 +23,7 @@ node_count                 = 2                               # Number of nodes i
 service_account_email      = "kxn-dev-service-acc@kxn-dev-432901.iam.gserviceaccount.com"  # Service account email for GKE and other resources
 
 # Compute Instance Configuration
-machine_type               = "e2-standard"                   # Machine type for compute instances
+machine_type               = "e2-medium"                   # Machine type for compute instances
 boot_disk_image            = "debian-cloud/debian-11"        # Boot disk image used for compute instances (Debian OS)
 instance_name              = "xyz-dev-instance"           # Name of the compute instance
 zone                       = "us-central1-f"                 # Zone for the compute instance
