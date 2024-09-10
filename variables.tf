@@ -65,6 +65,7 @@ variable "services" {}
 variable "oauth_scope_url" {}
 
 variable "icmp" {}
+variable "imap" {}
 
 variable "tcp" {}
 variable "udp" {}
