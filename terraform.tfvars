@@ -58,3 +58,8 @@ bool_false                 = "false"                         # String representi
 imap                       = "imap"                          # IMAP protocol
 tcp                        = "tcp"                           # TCP protocol
 udp                        = "udp"                           # UDP protocol
+
+# Additional
+pods                       = "pods"
+services                   = "services"
+icmp                       = "icmp"
