@@ -52,7 +52,7 @@ resource "google_compute_firewall" "allow_internal" {
   network = google_compute_network.vpc_network.name
 
   allow {
-    protocol = var.imap
+    protocol = var.icmp
   }
 
   allow {
