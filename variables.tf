@@ -24,7 +24,7 @@ variable "boot_disk_image" {}
   
 variable "node_pool_machine_type" {}
   
-variable "node_pool_disk_size" {}
+variable "node_disk_size" {}
   
 variable "service_account_email" {}
   
@@ -49,3 +49,34 @@ variable "internal_source_ranges" {}
 variable "ssh_source_ranges" {}
 
 variable "gke_location" {}
+
+variable "master_ipv4" {}
+
+variable "bool_true" {}
+
+variable "bool_false" {}
+
+variable "node_count" {}
+
+variable "pods" {}
+
+variable "services" {}
+
+variable "oauth_scope_url" {}
+
+variable "icmp" {}
+
+variable "tcp" {}
+variable "udp" {}
+
+variable "tcp_port_range" {}
+
+variable "udp_port_range" {}
+
+variable "tcp_ssh_port" {}
+
+variable "instance_name" {}
+
+variable "zone" {}
+
+variable "instance_disk_size" {}

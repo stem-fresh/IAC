@@ -5,7 +5,7 @@ provider "google" {
 
 resource "google_compute_network" "vpc_network" {
   name                    = var.vpc_name
-  auto_create_subnetworks = false
+  auto_create_subnetworks = var.bool_false
 }
 
 resource "google_compute_subnetwork" "public_subnet" {
@@ -20,15 +20,15 @@ resource "google_compute_subnetwork" "private_subnet" {
   network       = google_compute_network.vpc_network.name
   ip_cidr_range = var.private_subnet_ip_range
   region        = var.region
-  private_ip_google_access = true
+  private_ip_google_access = var.bool_true
 
   secondary_ip_range {
-    range_name    = "pods"
+    range_name    = var.pods
     ip_cidr_range = var.pod_ip_range
   }
 
   secondary_ip_range {
-    range_name    = "services"
+    range_name    = var.services
     ip_cidr_range = var.service_ip_range
   }
 }
@@ -52,20 +52,20 @@ resource "google_compute_firewall" "allow_internal" {
   network = google_compute_network.vpc_network.name
 
   allow {
-    protocol = "icmp"
+    protocol = var.imap
   }
 
   allow {
-    protocol = "tcp"
-    ports    = ["0-65535"]
+    protocol = var.tcp
+    ports    = var.tcp_port_range
   }
 
   allow {
-    protocol = "udp"
-    ports    = ["0-65535"]
+    protocol = var.udp
+    ports    = var.udp_port_range
   }
 
-  source_ranges = [var.internal_source_ranges]
+  source_ranges = var.internal_source_ranges
 }
 
 resource "google_compute_firewall" "allow_ssh" {
@@ -73,22 +73,22 @@ resource "google_compute_firewall" "allow_ssh" {
   network = google_compute_network.vpc_network.name
 
   allow {
-    protocol = "tcp"
-    ports    = ["22"]
+    protocol = var.tcp
+    ports    = var.tcp_ssh_port
   }
 
   source_ranges = [var.ssh_source_ranges]
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "my-vm-instance"
+  name         = var.instance_name
   machine_type = var.machine_type
-  zone         = "us-central1-f"
+  zone         = var.zone
 
   boot_disk {
     initialize_params {
       image = var.boot_disk_image
-      size  = 10
+      size  = var.instance_disk_size
     }
   }
 
