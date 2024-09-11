@@ -81,3 +81,7 @@ variable "instance_name" {}
 variable "zone" {}
 
 variable "instance_disk_size" {}
+
+variable "bucket_name" {}
+
+variable "bucket_location" {}

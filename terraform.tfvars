@@ -63,3 +63,10 @@ udp                        = "udp"                           # UDP protocol
 pods                       = "pods"
 services                   = "services"
 icmp                       = "icmp"
+
+#Bucket creation
+bucket_name               ="kxn-dev"
+bucket_location          ="US"
+
+
+
