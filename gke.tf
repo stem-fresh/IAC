@@ -37,7 +37,7 @@ resource "google_container_node_pool" "primary_nodes" {
 
     tags = ["private-node"]
 
-    service_account = var.service_account_email
+    service_account =  google_service_account.my_service_account.email
   }
 
   management {

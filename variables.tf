@@ -85,3 +85,8 @@ variable "instance_disk_size" {}
 variable "bucket_name" {}
 
 variable "bucket_location" {}
+
+variable "service_account_id" {}
+
+variable "service_account_display_name" {}
+

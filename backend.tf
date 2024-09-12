@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket  = "kxn-dev"
+    bucket  = var.bucket_name
     prefix  = "terraform/state"  # Optional: Organize the state files within a specific folder in the bucket
   }
 }

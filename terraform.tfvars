@@ -68,5 +68,7 @@ icmp                       = "icmp"
 bucket_name               ="kxn-dev"
 bucket_location          ="US"
 
-
+# Service Account Details
+service_account_id        = "xyz-dev"
+service_account_display_name = "xyz-dev-service-account"
 
