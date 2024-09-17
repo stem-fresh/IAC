@@ -17,7 +17,7 @@ gke_location               = "us-central1-f"                 # Location (zone/re
 node_pool_name             = "xyz-dev-primary-node-pool"     # Name of the node pool
 node_pool_machine_type     = "e2-standard-4"                 # Machine type for the GKE node pool
 node_disk_size             = 30                              # Disk size for nodes in the GKE node pool (in GB)
-node_count                 = 2                               # Number of nodes in the node pool
+node_count                 = 1                              # Number of nodes in the node pool
 
 # Service Account
 service_account_email      = "kxn-dev-service-acc@kxn-dev-432901.iam.gserviceaccount.com"  # Service account email for GKE and other resources
