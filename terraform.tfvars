@@ -16,7 +16,7 @@ gke_cluster_name           = "xyz-dev-private-cluster"       # Name of the GKE c
 gke_location               = "us-central1-f"                 # Location (zone/region) of the GKE cluster
 node_pool_name             = "xyz-dev-primary-node-pool"     # Name of the node pool
 node_pool_machine_type     = "e2-standard-4"                 # Machine type for the GKE node pool
-node_disk_size             = 30                              # Disk size for nodes in the GKE node pool (in GB)
+node_disk_size             = 15                              # Disk size for nodes in the GKE node pool (in GB)
 node_count                 = 1                              # Number of nodes in the node pool
 
 # Service Account
