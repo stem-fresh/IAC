@@ -6,7 +6,7 @@ resource "google_storage_bucket" "my_bucket" {
 
 terraform {
   backend "gcs" {
-    bucket  = var.bucket_name
+    bucket  = "kxn-dev"
     prefix  = "terraform/state"  # Optional: Organize the state files within a specific folder in the bucket
   }
 }
