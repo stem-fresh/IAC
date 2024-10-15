@@ -9,3 +9,5 @@ terraform init
 terraform plan
 # Destroy
 terraform destroy -auto-approve
+
+
