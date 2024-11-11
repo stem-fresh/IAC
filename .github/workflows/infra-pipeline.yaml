@@ -1,5 +1,4 @@
 name: Infra Create Pipeline
-
 on:
   push:
     branches:
